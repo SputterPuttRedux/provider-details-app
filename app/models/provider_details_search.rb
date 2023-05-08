@@ -68,6 +68,7 @@ class ProviderDetailsSearch
             "country_name",
             "address_purpose",
             "address_type",
+            "address_2",
             "fax_number",
             "telephone_number"
         )
