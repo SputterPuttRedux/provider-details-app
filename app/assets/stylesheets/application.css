@@ -50,6 +50,10 @@
     border-bottom: .05rem solid #ddd
  }
 
+ .highlight {
+    background-color: #D6EEEE;
+ }
+
  .flash {
     font-weight: bold;
     color:crimson;

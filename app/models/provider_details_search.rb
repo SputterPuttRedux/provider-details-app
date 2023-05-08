@@ -19,7 +19,7 @@ class ProviderDetailsSearch
     private
 
     def validate_search
-        errors.add(:search, "No results found for NPID #{npid}. Please try again.") if response.nil?
+        errors.add(:search, "No results found for NPID #{npid}. Please try again.") if response_invalid?
     end
 
     def create_or_update_provider_user!
@@ -94,5 +94,9 @@ class ProviderDetailsSearch
             "number" => npid,
             "version" => NPID_API_VERSION,
         }
+    end
+
+    def response_invalid?
+        response.nil? || response.empty?
     end
 end

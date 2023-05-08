@@ -28,7 +28,7 @@
   </thead>
   <tbody>
     <% @providers.each do |provider| %>
-      <tr>
+      <tr data-provider-id="<%= provider.id %>">
         <td><%= provider.npid %></td>
         <td><%= "#{provider.first_name} #{provider.last_name}" %></td>
         <td>

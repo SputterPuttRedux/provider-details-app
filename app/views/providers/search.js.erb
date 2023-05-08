@@ -1,0 +1,11 @@
+const table = document.querySelector('.provider-results tbody');
+  table.addEventListener('ajax:success', (event) => {
+    const [data, status, xhr] = event.detail;
+    const row = document.querySelector(`tr[data-provider-id="${data.id}"]`);
+    if (row) {
+      row.classList.add('highlight');
+      setTimeout(() => {
+        row.classList.remove('highlight');
+      }, 3000);
+    }
+  });
