@@ -1,0 +1,43 @@
+<div class="search-container">
+  <h1>Search NPI Records</h1>
+  <hr>
+  <p>Please enter the provider NPID to search</p>
+
+    <% flash.each do |type, msg| %>
+      <div class="flash <%= type %>">
+        <%= msg %>
+      </div>
+    <% end %>
+
+    <%= form_with url: search_providers_url, method: :post, local: false, html: { class: 'provider-search-form' } do |form| %>
+      <%= form.label :npid, "NPID:" %>
+      <%= form.text_field :npid, class: 'provider-search-input' %>
+      <%= form.submit "Search", class: 'provider-search-submit' %>
+    <% end %>
+</div>
+
+<table class="provider-results">
+  <thead>
+    <tr>
+      <th>NPID</th>
+      <th>Name</th>
+      <th>Address</th>
+      <th>Type</th>
+      <th>Taxonomy</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @providers.each do |provider| %>
+      <tr>
+        <td><%= provider.npid %></td>
+        <td><%= "#{provider.first_name} #{provider.last_name}" %></td>
+        <td>
+          <span><%= provider.address_1 %></span> <br>
+          <span><%= "#{provider.city}, #{provider.state}  #{provider.postal_code }" %></span>
+        </td>
+        <td><%= provider.enumeration_type %></td>
+        <td><%= provider.taxonomy %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
