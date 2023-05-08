@@ -1,15 +1,63 @@
 /*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
  *= require_tree .
  *= require_self
  */
+
+ .container {
+    font-family: Helvetica, "Trebuchet MS", Verdana, sans-serif;
+    padding-top: 5rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
+ }
+
+ .provider-search-submit {
+    background-color: #008CBA;
+    border: none;
+    color: white;
+    font-size: medium;
+    border-radius: 4px;
+    transition-duration: 0.3s;
+    height: 2.5rem;
+    width: 5rem;
+    margin-left: 1rem;
+ }
+
+ .provider-search-submit:hover {
+    background-color: white;
+    color: #008CBA;
+    border: .075rem solid #008CBA;
+ }
+
+ .provider-search-form {
+    padding-top: 2rem;
+ }
+
+ .provider-search-input {
+    width: 50%;
+    height: 2rem;
+    border: .075rem solid grey;
+    border-radius: 4px;
+ }
+
+ .provider-results{
+    padding-top: 2rem;
+    width: 100%;
+ }
+
+ .provider-results th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: .05rem solid #ddd
+ }
+
+ .flash {
+    font-weight: bold;
+    color:crimson;
+    background-color: #E7A7A7;
+    border: .075rem solid crimson;
+    -moz-border-radius: .075rem;
+    -webkit-border-radius: .075rem;
+    border-radius: .075rem;
+    margin-bottom: 1rem;
+    padding: 1rem;
+ }
