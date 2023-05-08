@@ -1,5 +1,8 @@
 # Welcome to Provider Details App
 
+<img width="1627" alt="Screen Shot 2023-05-08 at 10 55 43 AM" src="https://user-images.githubusercontent.com/6538292/236858262-3959682b-e2a7-4a61-b8f4-c02b3bf98f65.png">
+
+
 Provider Details App is a small web application built on Ruby on Rails.  It allows a user to access a medical provider's details based on their National Provider Identifier (NPI).
 
 To test this application:
